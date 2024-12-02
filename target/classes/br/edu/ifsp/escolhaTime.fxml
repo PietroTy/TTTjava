@@ -47,6 +47,7 @@
                   <Font name="Rockwell" size="20.0" />
                </font>
             </Button>
+            <Button layoutX="624.0" layoutY="17.0" mnemonicParsing="false" onAction="#irJogo" text="IR JOGO TEMPORARIO" />
          </children>
       </AnchorPane>
     </children>

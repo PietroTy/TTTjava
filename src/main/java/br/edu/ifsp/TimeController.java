@@ -13,12 +13,17 @@ public class TimeController {
     }
 
     @FXML
+    private void irJogo() throws IOException {
+        App.setRoot("jogo");
+    }
+
+    @FXML
     private TextField nomeX;
     @FXML
     private TextField nomeO;
 
-    String nomeXis;
-    String nomeBola;
+    public String nomeXis;
+    public String nomeBola;
 
     public void inserirNomeX( ActionEvent event ) {
 

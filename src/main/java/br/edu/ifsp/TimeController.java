@@ -9,12 +9,23 @@ public class TimeController {
 
     @FXML
     private void irMenu() throws IOException {
-        App.setRoot("menu");
+
+        App.setRoot("menu" );
+
     }
 
     @FXML
-    private void irJogo() throws IOException {
-        App.setRoot("jogo");
+    private void irVelha() throws IOException {
+
+        App.setRoot("velha" );
+
+    }
+
+    @FXML
+    private void irVelhaQuadrado() throws IOException {
+
+        App.setRoot( "velha2" );
+
     }
 
     @FXML

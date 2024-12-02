@@ -10,7 +10,7 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="800.0">
          <children>
-            <Button layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#irEscolha" prefHeight="75.0" prefWidth="179.0" text="INCIAR">
+            <Button fx:id="iniciar" layoutX="310.0" layoutY="250.0" mnemonicParsing="false" onAction="#irEscolha" prefHeight="75.0" prefWidth="179.0" text="INCIAR">
                <font>
                   <Font name="Rockwell" size="30.0" />
                </font></Button>
@@ -34,7 +34,7 @@
                   <Font name="Rockwell" size="20.0" />
                </font>
             </Text>
-            <Button layoutX="310.0" layoutY="355.0" mnemonicParsing="false" onAction="#sair" prefHeight="75.0" prefWidth="179.0" text="SAIR">
+            <Button fx:id="sair" layoutX="310.0" layoutY="355.0" mnemonicParsing="false" onAction="#sair" prefHeight="75.0" prefWidth="179.0" text="SAIR">
                <font>
                   <Font name="Rockwell" size="30.0" />
                </font></Button>

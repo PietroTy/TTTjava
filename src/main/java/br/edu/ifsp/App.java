@@ -1,4 +1,4 @@
-    package br.edu.ifsp;
+package br.edu.ifsp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -35,4 +35,5 @@ public class App extends Application {
         launch();
     }
 
+    
 }

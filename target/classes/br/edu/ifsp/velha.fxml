@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.Velha">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.Velha">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="800.0">
          <children>
+            <Button fx:id="botao9" layoutX="520.0" layoutY="350.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Canvas height="200.0" layoutX="79.0" layoutY="166.0" width="200.0" />
+            <Button fx:id="botao8" layoutX="320.0" layoutY="350.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Button fx:id="botao6" layoutX="520.0" layoutY="196.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
             <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#voltarEscolha" text="&lt;--" />
             <Line endX="297.6327819824219" layoutX="200.0" layoutY="257.0" rotate="90.0" startX="-130.67312622070312" strokeWidth="5.0" />
             <Line endX="297.6327819824219" layoutX="436.0" layoutY="258.0" rotate="90.0" startX="-130.0" strokeWidth="5.0" />
             <Line endX="336.0" endY="-2.8416748046875" layoutX="314.0" layoutY="160.0" startX="-168.0" startY="-2.8416748046875" strokeWidth="5.0" />
             <Line endX="336.0" endY="-2.8416748046875" layoutX="314.0" layoutY="356.0" startX="-169.0" startY="-2.8416900634765625" strokeWidth="5.0" />
+            <Button fx:id="botao2" layoutX="320.0" layoutY="30.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Button fx:id="botao1" layoutX="114.0" layoutY="30.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Button fx:id="botao5" layoutX="319.0" layoutY="195.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Button fx:id="botao3" layoutX="520.0" layoutY="30.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Button fx:id="botao4" layoutX="114.0" layoutY="195.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
+            <Button fx:id="botao7" layoutX="124.0" layoutY="350.0" mnemonicParsing="false" onAction="#computarJogada" prefHeight="124.0" prefWidth="157.0" text="Button" />
          </children>
       </AnchorPane>
    </children>

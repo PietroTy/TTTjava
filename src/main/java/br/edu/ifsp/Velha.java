@@ -18,8 +18,7 @@ public class Velha {
     int[][] jogo = new int[3][3];
     private int PLAYER_X = 1;
     private int PLAYER_O = 2;
-    public int linha = 0;
-    public int coluna = 0;
+    boolean turno = true;          //true é X ; false é O;
 
     /* 
     Button buttons = new Button[][] {
@@ -59,33 +58,136 @@ public class Velha {
         }
     }
 
+    public void computarJogada00(){
+
+        if( turno ) {
+
+            jogo[0][0] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[0][0] = 2;
+            turno =! turno;
+        }
+
+    }
+    public void computarJogada01(){
+
+        if( turno ) {
+
+            jogo[0][1] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[0][1] = 2;
+            turno =! turno;
+        }
+        
+    }
+    public void computarJogada02(){
+
+        if( turno ) {
+
+            jogo[0][2] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[0][2] = 2;
+            turno =! turno;
+        }
+
+    }
+    public void computarJogada10(){
+
+        if( turno ) {
+
+            jogo[1][0] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[1][0] = 2;
+            turno =! turno;
+        }
+
+    }
+    public void computarJogada11(){
+
+        if( turno ) {
+
+            jogo[1][1] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[1][1] = 2;
+            turno =! turno;
+        }
+
+    }
+    public void computarJogada12(){
+
+        if( turno ) {
+
+            jogo[1][2] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[1][2] = 2;
+            turno =! turno;
+        }
 
 
-    public void computarJogada(){
-        System.out.println(linha, coluna);
+    }
+    public void computarJogada20(){
+
+        if( turno ) {
+
+            jogo[2][0] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[2][0] = 2;
+            turno =! turno;
+        }
+
 
     }
+    public void computarJogada21(){
 
-    public void setLinha0(){
-        linha = 0;
-    }
-    public void setLinha1(){
-        linha = 1;
-    }
-    public void setLinha2(){
-        linha = 2;
-    }
+        if( turno ) {
 
-    public void setColuna0(){
-        coluna = 0;
-    }
-    public void setColuna1(){
-        coluna = 1;
-    }
-    public void setColuna2(){
-        coluna = 2;
-    }
-    
+            jogo[2][1] = 1;
+            turno =! turno;
 
+        } else {
+
+            jogo[2][1] = 2;
+            turno =! turno;
+        }
+
+
+    }
+    public void computarJogada22(){
+
+        if( turno ) {
+
+            jogo[2][2] = 1;
+            turno =! turno;
+
+        } else {
+
+            jogo[2][2] = 2;
+            turno =! turno;
+        }
+
+        System.out.printf("%d\n", jogo[2][2]);
+
+    }
 
 }

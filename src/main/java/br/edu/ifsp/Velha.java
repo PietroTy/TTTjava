@@ -14,6 +14,25 @@ public class Velha {
 
     }
 
+    @FXML
+    private Button b00;
+    @FXML
+    private Button b01;
+    @FXML
+    private Button b02;
+    @FXML
+    private Button b10;
+    @FXML
+    private Button b11;
+    @FXML
+    private Button b12;
+    @FXML
+    private Button b20;
+    @FXML
+    private Button b21;
+    @FXML
+    private Button b22;
+
     //Array de 3 por 3 para representar o tabuleiro do jogo;
     int[][] jogo = new int[3][3];
     private int PLAYER_X = 1;
@@ -71,6 +90,8 @@ public class Velha {
             turno =! turno;
         }
 
+        b00.setDisable( true );
+
     }
     public void computarJogada01(){
 
@@ -85,6 +106,8 @@ public class Velha {
             turno =! turno;
         }
         
+        b01.setDisable( true );
+
     }
     public void computarJogada02(){
 
@@ -98,6 +121,8 @@ public class Velha {
             jogo[0][2] = 2;
             turno =! turno;
         }
+
+        b02.setDisable( true );
 
     }
     public void computarJogada10(){
@@ -113,6 +138,8 @@ public class Velha {
             turno =! turno;
         }
 
+        b10.setDisable( true );
+
     }
     public void computarJogada11(){
 
@@ -126,6 +153,8 @@ public class Velha {
             jogo[1][1] = 2;
             turno =! turno;
         }
+
+        b11.setDisable( true );
 
     }
     public void computarJogada12(){
@@ -141,6 +170,7 @@ public class Velha {
             turno =! turno;
         }
 
+        b12.setDisable( true );
 
     }
     public void computarJogada20(){
@@ -156,6 +186,7 @@ public class Velha {
             turno =! turno;
         }
 
+        b20.setDisable( true );
 
     }
     public void computarJogada21(){
@@ -171,6 +202,7 @@ public class Velha {
             turno =! turno;
         }
 
+        b21.setDisable( true );
 
     }
     public void computarJogada22(){
@@ -186,7 +218,7 @@ public class Velha {
             turno =! turno;
         }
 
-        System.out.printf("%d\n", jogo[2][2]);
+        b22.setDisable( true );
 
     }
 

@@ -3,11 +3,8 @@ package br.edu.ifsp;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Font;
+
 
 public class Velha {
 
@@ -39,202 +36,121 @@ public class Velha {
 
     //Array de 3 por 3 para representar o tabuleiro do jogo;
     int[][] jogo = new int[3][3];
-    private int PLAYER_X = 1;
-    private int PLAYER_O = 2;
     boolean turno = true;          //true é X ; false é O;
-    public Canvas canvas = new Canvas(800, 500);
-    public GraphicsContext gc = canvas.getGraphicsContext2D();
-    public StackPane root = new StackPane();
 
 
     public void checarVitoria(int[][] jogo){
+
         for(int i = 0; i < 3; i++){
 
-            //Checa linha
+            //Checa linha X
             if((jogo[i][0] == 1) && (jogo[i][1] == 1) && (jogo[i][2] == 1)){
-                System.out.println("Bola ganha linha");
+                System.out.println("X ganha linha");
             }
 
-            //Checa coluna
+            //Checa coluna X
             if((jogo[0][i] == 1) && (jogo[1][i] == 1) && (jogo[2][i] == 1)){
-                System.out.println("Bola ganha coluna");
+                System.out.println("X ganha coluna");
             }
+
+             //Checa linha O
+             if((jogo[i][0] == 2) && (jogo[i][1] == 2) && (jogo[i][2] == 2)){
+                System.out.println("O ganha linha");
+            }
+
+            //Checa coluna O
+            if((jogo[0][i] == 2) && (jogo[1][i] == 2) && (jogo[2][i] == 2)){
+                System.out.println("O ganha coluna");
+            }
+
 
         }
 
-        //Checa diagonal 1
+        //Checa diagonal 1 X
         if( ( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) {
 
-            System.out.println( "Bola ganha diagonal principal" );
+            System.out.println( "X ganha diagonal principal" );
 
         } 
 
-        //Checa diagonal 2
+        //Checa diagonal 2 X
         if( ( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1 ) {
 
-            System.out.println( "Bola ganha diagonal secundaria" );
+            System.out.println( "X ganha diagonal secundaria" );
+
+        }
+
+        //Checa diagonal 1 O
+        if( ( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) {
+
+            System.out.println( "O ganha diagonal principal" );
+
+        } 
+
+        //Checa diagonal 2 O
+        if( ( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2 ) {
+
+            System.out.println( "O ganha diagonal secundaria" );
 
         }
     }
 
     public void computarJogada00(){
-
-        if( turno ) {
-
-            jogo[0][0] = 1;
-            turno =! turno;
-
-            aparecerBotao(b00, "X");
-
-            System.out.println(jogo[0][0]);
-
-        } else {
-
-            b00.setText("O");
-            b00.setOpacity(1);
-            b00.setBackground(null);
-
-            jogo[0][0] = 2;
-            turno =! turno;
-        }
-
-        b00.setDisable( true );
-
+        aparecerBotao(b00, 0, 0);
     }
+    
     public void computarJogada01(){
-
-        if( turno ) {
-
-            jogo[0][1] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[0][1] = 2;
-            turno =! turno;
-        }
-        
-        b01.setDisable( true );
-
+        aparecerBotao(b01, 0, 1);
     }
+
     public void computarJogada02(){
-
-        if( turno ) {
-
-            jogo[0][2] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[0][2] = 2;
-            turno =! turno;
-        }
-
-        b02.setDisable( true );
-
+        aparecerBotao(b02, 0, 2);
     }
+
     public void computarJogada10(){
-
-        if( turno ) {
-
-            jogo[1][0] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[1][0] = 2;
-            turno =! turno;
-        }
-
-        b10.setDisable( true );
-
+        aparecerBotao(b10, 1, 0);
     }
+    
     public void computarJogada11(){
-
-        if( turno ) {
-
-            jogo[1][1] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[1][1] = 2;
-            turno =! turno;
-        }
-
-        b11.setDisable( true );
-
+        aparecerBotao(b11, 1, 1);
     }
+
     public void computarJogada12(){
-
-        if( turno ) {
-
-            jogo[1][2] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[1][2] = 2;
-            turno =! turno;
-        }
-
-        b12.setDisable( true );
-
+        aparecerBotao(b12, 1, 2);
     }
+
     public void computarJogada20(){
-
-        if( turno ) {
-
-            jogo[2][0] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[2][0] = 2;
-            turno =! turno;
-        }
-
-        b20.setDisable( true );
-
+        aparecerBotao(b20, 2, 0);
     }
+
     public void computarJogada21(){
-
-        if( turno ) {
-
-            jogo[2][1] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[2][1] = 2;
-            turno =! turno;
-        }
-
-        b21.setDisable( true );
-
+        aparecerBotao(b21, 2, 1);
     }
+
     public void computarJogada22(){
-
-        if( turno ) {
-
-            jogo[2][2] = 1;
-            turno =! turno;
-
-        } else {
-
-            jogo[2][2] = 2;
-            turno =! turno;
-        }
-
-        b22.setDisable( true );
-
+        aparecerBotao(b22, 2, 2);
     }
 
-    private void aparecerBotao(Button botao, String texto){
-        botao.setText(texto);
+
+    private void aparecerBotao(Button botao, int linha, int coluna){
         botao.setOpacity(1);
         botao.setBackground(null);
-    }
 
+        if( turno ){
+            jogo[linha][coluna] = 1;
+            botao.setText("X");
+        }
+        else {
+            jogo[linha][coluna] = 2;
+            botao.setText("O");
+        }
+
+        turno =! turno;
+        botao.setDisable( true );
+
+        System.out.println(jogo[linha][coluna]);
+
+        checarVitoria(jogo);
+    }
 
 }

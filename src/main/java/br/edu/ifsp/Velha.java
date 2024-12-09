@@ -39,34 +39,43 @@ public class Velha {
     boolean turno = true;          //true é X ; false é O;
 
 
-    public int checarVitoria(int[][] jogo){
+    public void checarVitoria(int[][] jogo) {
 
+        try{
+            
         for(int i = 0; i < 3; i++){
 
             //Checa linha X
             if((jogo[i][0] == 1) && (jogo[i][1] == 1) && (jogo[i][2] == 1)){
+
                 System.out.println("X ganha linha");
-                return 1;
+                App.setRoot("vitoriaX" );
+
             }
 
             //Checa coluna X
             if((jogo[0][i] == 1) && (jogo[1][i] == 1) && (jogo[2][i] == 1)){
+
                 System.out.println("X ganha coluna");
-                return 1;
+                App.setRoot("vitoriaX" );
+            
             }
 
              //Checa linha O
              if((jogo[i][0] == 2) && (jogo[i][1] == 2) && (jogo[i][2] == 2)){
+
                 System.out.println("O ganha linha");
-                return 2;
+                App.setRoot("vitoriaO" );
+            
             }
 
             //Checa coluna O
             if((jogo[0][i] == 2) && (jogo[1][i] == 2) && (jogo[2][i] == 2)){
-                System.out.println("O ganha coluna");
-                return 2;
-            }
 
+                System.out.println("O ganha coluna");
+                App.setRoot("vitoriaO" );
+    
+            }
 
         }
 
@@ -74,7 +83,7 @@ public class Velha {
         if( ( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) {
 
             System.out.println( "X ganha diagonal principal" );
-            return 1;
+            App.setRoot("vitoriaX" );
 
         } 
 
@@ -82,7 +91,7 @@ public class Velha {
         if( ( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1 ) {
 
             System.out.println( "X ganha diagonal secundaria" );
-            return 1;
+            App.setRoot("vitoriaX" );
 
         }
 
@@ -90,7 +99,7 @@ public class Velha {
         if( ( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) {
 
             System.out.println( "O ganha diagonal principal" );
-            return 2;
+            App.setRoot("vitoriaO" );
 
         } 
 
@@ -98,61 +107,91 @@ public class Velha {
         if( ( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2 ) {
 
             System.out.println( "O ganha diagonal secundaria" );
-            return 2;
+            App.setRoot("vitoriaO" );
 
         }
         
-        return 0;
+        App.setRoot("empate" );
+
+        } catch(IOException ex){
+
+            System.out.println("Erro o trocar de tela");
+            System.err.println(ex.getMessage());
+
+        }
+
     }
 
-    public void computarJogada00(){
+    public void computarJogada00() {
+
         aparecerBotao(b00, 0, 0);
+
     }
     
-    public void computarJogada01(){
+    public void computarJogada01() {
+
         aparecerBotao(b01, 0, 1);
+
     }
 
-    public void computarJogada02(){
+    public void computarJogada02() {
+
         aparecerBotao(b02, 0, 2);
+
     }
 
-    public void computarJogada10(){
+    public void computarJogada10() {
+
         aparecerBotao(b10, 1, 0);
+
     }
     
-    public void computarJogada11(){
+    public void computarJogada11() {
+
         aparecerBotao(b11, 1, 1);
+
     }
 
-    public void computarJogada12(){
+    public void computarJogada12() {
+
         aparecerBotao(b12, 1, 2);
+        
     }
 
-    public void computarJogada20(){
+    public void computarJogada20() {
+
         aparecerBotao(b20, 2, 0);
+
     }
 
-    public void computarJogada21(){
+    public void computarJogada21() {
+
         aparecerBotao(b21, 2, 1);
+
     }
 
-    public void computarJogada22(){
+    public void computarJogada22() {
+        
         aparecerBotao(b22, 2, 2);
+
     }
 
 
     private void aparecerBotao(Button botao, int linha, int coluna){
+
         botao.setOpacity(1);
         botao.setBackground(null);
 
         if( turno ){
+
             jogo[linha][coluna] = 1;
             botao.setText("X");
-        }
-        else {
+
+        } else {
+
             jogo[linha][coluna] = 2;
-            botao.setText("O");
+            botao.setText( "O" );
+
         }
 
         turno =! turno;

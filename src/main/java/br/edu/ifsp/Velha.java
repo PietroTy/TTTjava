@@ -39,28 +39,32 @@ public class Velha {
     boolean turno = true;          //true é X ; false é O;
 
 
-    public void checarVitoria(int[][] jogo){
+    public int checarVitoria(int[][] jogo){
 
         for(int i = 0; i < 3; i++){
 
             //Checa linha X
             if((jogo[i][0] == 1) && (jogo[i][1] == 1) && (jogo[i][2] == 1)){
                 System.out.println("X ganha linha");
+                return 1;
             }
 
             //Checa coluna X
             if((jogo[0][i] == 1) && (jogo[1][i] == 1) && (jogo[2][i] == 1)){
                 System.out.println("X ganha coluna");
+                return 1;
             }
 
              //Checa linha O
              if((jogo[i][0] == 2) && (jogo[i][1] == 2) && (jogo[i][2] == 2)){
                 System.out.println("O ganha linha");
+                return 2;
             }
 
             //Checa coluna O
             if((jogo[0][i] == 2) && (jogo[1][i] == 2) && (jogo[2][i] == 2)){
                 System.out.println("O ganha coluna");
+                return 2;
             }
 
 
@@ -70,6 +74,7 @@ public class Velha {
         if( ( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) {
 
             System.out.println( "X ganha diagonal principal" );
+            return 1;
 
         } 
 
@@ -77,6 +82,7 @@ public class Velha {
         if( ( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1 ) {
 
             System.out.println( "X ganha diagonal secundaria" );
+            return 1;
 
         }
 
@@ -84,6 +90,7 @@ public class Velha {
         if( ( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) {
 
             System.out.println( "O ganha diagonal principal" );
+            return 2;
 
         } 
 
@@ -91,8 +98,11 @@ public class Velha {
         if( ( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2 ) {
 
             System.out.println( "O ganha diagonal secundaria" );
+            return 2;
 
         }
+        
+        return 0;
     }
 
     public void computarJogada00(){

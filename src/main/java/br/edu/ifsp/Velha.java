@@ -7,6 +7,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 
 public class Velha {
 
@@ -83,12 +84,15 @@ public class Velha {
             jogo[0][0] = 1;
             turno =! turno;
 
-            b00.setText("X");
-            b00.setOpacity(1);
+            aparecerBotao(b00, "X");
 
             System.out.println(jogo[0][0]);
 
         } else {
+
+            b00.setText("O");
+            b00.setOpacity(1);
+            b00.setBackground(null);
 
             jogo[0][0] = 2;
             turno =! turno;
@@ -224,6 +228,12 @@ public class Velha {
 
         b22.setDisable( true );
 
+    }
+
+    private void aparecerBotao(Button botao, String texto){
+        botao.setText(texto);
+        botao.setOpacity(1);
+        botao.setBackground(null);
     }
 
 

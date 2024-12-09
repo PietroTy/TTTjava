@@ -9,20 +9,20 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="800.0">
          <children>
-            <Button fx:id="b22" layoutX="520.0" layoutY="356.0" mnemonicParsing="false" onAction="#computarJogada22" opacity="0.0" prefHeight="115.0" prefWidth="151.0" text="b22" />
-            <Button fx:id="b21" layoutX="287.0" layoutY="357.0" mnemonicParsing="false" onAction="#computarJogada21" opacity="0.0" prefHeight="124.0" prefWidth="229.0" text="b21" />
-            <Button fx:id="b12" layoutX="520.0" layoutY="159.0" mnemonicParsing="false" onAction="#computarJogada12" opacity="0.0" prefHeight="193.0" prefWidth="157.0" text="b12" />
+            <Button fx:id="b22" layoutX="520.0" layoutY="356.0" mnemonicParsing="false" onAction="#computarJogada22" opacity="0.0" prefHeight="115.0" prefWidth="151.0" style="-fx-font-size: 70px" />
+            <Button fx:id="b21" layoutX="287.0" layoutY="357.0" mnemonicParsing="false" onAction="#computarJogada21" opacity="0.0" prefHeight="124.0" prefWidth="229.0" style="-fx-font-size: 70px" />
+            <Button fx:id="b12" layoutX="520.0" layoutY="159.0" mnemonicParsing="false" onAction="#computarJogada12" opacity="0.0" prefHeight="193.0" prefWidth="157.0" style="-fx-font-size: 70px" />
             <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#voltarEscolha" text="&lt;--" />
             <Line endX="297.6327819824219" layoutX="200.0" layoutY="257.0" rotate="90.0" startX="-130.67312622070312" strokeWidth="5.0" />
             <Line endX="297.6327819824219" layoutX="436.0" layoutY="258.0" rotate="90.0" startX="-130.0" strokeWidth="5.0" />
             <Line endX="336.0" endY="-2.8416748046875" layoutX="314.0" layoutY="160.0" startX="-168.0" startY="-2.8416748046875" strokeWidth="5.0" />
             <Line endX="336.0" endY="-2.8416748046875" layoutX="314.0" layoutY="356.0" startX="-169.0" startY="-2.8416900634765625" strokeWidth="5.0" />
-            <Button fx:id="b01" layoutX="287.0" layoutY="30.0" mnemonicParsing="false" onAction="#computarJogada01" opacity="0.0" prefHeight="124.0" prefWidth="229.0" text="b01" />
-            <Button fx:id="b00" layoutX="121.0" layoutY="35.0" mnemonicParsing="false" onAction="#computarJogada00" opacity="0.0" prefHeight="124.0" prefWidth="168.0" />
-            <Button fx:id="b11" layoutX="285.0" layoutY="159.0" mnemonicParsing="false" onAction="#computarJogada11" opacity="0.0" prefHeight="193.0" prefWidth="229.0" text="b11" />
-            <Button fx:id="b02" layoutX="520.0" layoutY="39.0" mnemonicParsing="false" onAction="#computarJogada02" opacity="0.0" prefHeight="115.0" prefWidth="157.0" text="b02" />
-            <Button fx:id="b10" layoutX="129.0" layoutY="160.0" mnemonicParsing="false" onAction="#computarJogada10" opacity="0.0" prefHeight="193.0" prefWidth="151.0" text="b10" />
-            <Button fx:id="b20" layoutX="126.0" layoutY="357.0" mnemonicParsing="false" onAction="#computarJogada20" opacity="0.0" prefHeight="124.0" prefWidth="157.0" text="b20" />
+            <Button fx:id="b01" layoutX="287.0" layoutY="30.0" mnemonicParsing="false" onAction="#computarJogada01" opacity="0.0" prefHeight="124.0" prefWidth="229.0" style="-fx-font-size: 70px" />
+            <Button fx:id="b00" layoutX="121.0" layoutY="35.0" mnemonicParsing="false" onAction="#computarJogada00" opacity="0.0" prefHeight="124.0" prefWidth="168.0" style="-fx-font-size: 70px"/>
+            <Button fx:id="b11" layoutX="285.0" layoutY="159.0" mnemonicParsing="false" onAction="#computarJogada11" opacity="0.0" prefHeight="193.0" prefWidth="229.0" style="-fx-font-size: 70px" />
+            <Button fx:id="b02" layoutX="520.0" layoutY="39.0" mnemonicParsing="false" onAction="#computarJogada02" opacity="0.0" prefHeight="115.0" prefWidth="157.0" style="-fx-font-size: 70px" />
+            <Button fx:id="b10" layoutX="129.0" layoutY="160.0" mnemonicParsing="false" onAction="#computarJogada10" opacity="0.0" prefHeight="193.0" prefWidth="151.0" style="-fx-font-size: 70px" />
+            <Button fx:id="b20" layoutX="126.0" layoutY="357.0" mnemonicParsing="false" onAction="#computarJogada20" opacity="0.0" prefHeight="124.0" prefWidth="157.0" style="-fx-font-size: 70px" />
          </children>
       </AnchorPane>
    </children>

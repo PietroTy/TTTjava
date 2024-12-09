@@ -3,7 +3,10 @@ package br.edu.ifsp;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 
 public class Velha {
 
@@ -38,14 +41,10 @@ public class Velha {
     private int PLAYER_X = 1;
     private int PLAYER_O = 2;
     boolean turno = true;          //true é X ; false é O;
+    public Canvas canvas = new Canvas(800, 500);
+    public GraphicsContext gc = canvas.getGraphicsContext2D();
+    public StackPane root = new StackPane();
 
-    /* 
-    Button buttons = new Button[][] {
-            { (Button) loader.getNamespace().get("button00"), (Button) loader.getNamespace().get("button01"), (Button) loader.getNamespace().get("button02") },
-            { (Button) loader.getNamespace().get("button10"), (Button) loader.getNamespace().get("button11"), (Button) loader.getNamespace().get("button12") },
-            { (Button) loader.getNamespace().get("button20"), (Button) loader.getNamespace().get("button21"), (Button) loader.getNamespace().get("button22") }
-    };
-    */
 
     public void checarVitoria(int[][] jogo){
         for(int i = 0; i < 3; i++){
@@ -83,6 +82,11 @@ public class Velha {
 
             jogo[0][0] = 1;
             turno =! turno;
+
+            b00.setText("X");
+            b00.setOpacity(1);
+
+            System.out.println(jogo[0][0]);
 
         } else {
 
@@ -221,5 +225,6 @@ public class Velha {
         b22.setDisable( true );
 
     }
+
 
 }

@@ -33,8 +33,8 @@ public class TimeController {
     @FXML
     private TextField nomeO;
 
-    public String nomeXis;
-    public String nomeBola;
+    private String nomeXis;
+    private String nomeBola;
 
     public void inserirNomeX( ActionEvent event ) {
 
@@ -47,4 +47,6 @@ public class TimeController {
         nomeBola = nomeO.getText();
 
     }
+
+    
 }

@@ -3,6 +3,7 @@ package br.edu.ifsp;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
 
 public class TimeController {
@@ -33,20 +34,21 @@ public class TimeController {
     @FXML
     private TextField nomeO;
 
-    private String nomeXis;
-    private String nomeBola;
+    public String nomeXis;
+    public String nomeBola;
 
-    public void inserirNomeX( ActionEvent event ) {
+    @FXML
+    private void guardarX() {
 
         nomeXis = nomeX.getText();
 
     }
 
-    public void inserirNomeO( ActionEvent event ) {
+    @FXML
+    private void guardarO() {
 
         nomeBola = nomeO.getText();
 
     }
 
-    
 }

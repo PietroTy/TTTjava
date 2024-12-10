@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.VitoriaX">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="800.0">
          <children>
@@ -15,7 +15,7 @@
                   <Font name="Rockwell" size="70.0" />
                </font>
             </Text>
-            <Text fill="BLUE" layoutX="312.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER">
+            <Text fill="BLUE" layoutX="312.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" fx:id="xNome">
                <font>
                   <Font size="65.0" />
                </font>

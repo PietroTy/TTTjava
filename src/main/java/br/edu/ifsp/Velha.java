@@ -35,11 +35,39 @@ public class Velha {
     private Button b22;
 
     //Array de 3 por 3 para representar o tabuleiro do jogo;
-    int[][] jogo = new int[3][3];
-    boolean turno = true;          //true é X ; false é O;
+    private int[][] jogo = new int[3][3];
+    private boolean turno = true;          //true é X ; false é O;
 
+    public void verificarEmpate(int[][] jogo) throws IOException {
 
-    public void checarVitoria(int[][] jogo) {
+        boolean cheio = true;
+    
+        // Verifica se todas as posições no tabuleiro estão preenchidas (sem valores 0)
+        for (int i = 0; i < 3; i++) {
+
+            for (int j = 0; j < 3; j++) {
+
+                if (jogo[i][j] == 0) {
+
+                    cheio = false;  // Encontrou um espaço vazio, então o tabuleiro não está cheio
+                    break;
+
+                }
+
+            }
+
+        }
+    
+        // Se o tabuleiro estiver cheio e ninguém venceu, é empate
+        if (cheio) {
+
+            App.setRoot("empate");  // Direciona para a tela de empate
+
+        }
+        
+    }
+
+    private void checarVitoria(int[][] jogo) {
 
         try{
             
@@ -47,8 +75,7 @@ public class Velha {
 
             //Checa linha X
             if((jogo[i][0] == 1) && (jogo[i][1] == 1) && (jogo[i][2] == 1)){
-
-                System.out.println("X ganha linha");
+                
                 App.setRoot("vitoriaX" );
 
             }
@@ -56,7 +83,6 @@ public class Velha {
             //Checa coluna X
             if((jogo[0][i] == 1) && (jogo[1][i] == 1) && (jogo[2][i] == 1)){
 
-                System.out.println("X ganha coluna");
                 App.setRoot("vitoriaX" );
             
             }
@@ -64,15 +90,13 @@ public class Velha {
              //Checa linha O
              if((jogo[i][0] == 2) && (jogo[i][1] == 2) && (jogo[i][2] == 2)){
 
-                System.out.println("O ganha linha");
                 App.setRoot("vitoriaO" );
             
             }
 
             //Checa coluna O
             if((jogo[0][i] == 2) && (jogo[1][i] == 2) && (jogo[2][i] == 2)){
-
-                System.out.println("O ganha coluna");
+                
                 App.setRoot("vitoriaO" );
     
             }
@@ -82,7 +106,6 @@ public class Velha {
         //Checa diagonal 1 X
         if( ( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) {
 
-            System.out.println( "X ganha diagonal principal" );
             App.setRoot("vitoriaX" );
 
         } 
@@ -90,7 +113,6 @@ public class Velha {
         //Checa diagonal 2 X
         if( ( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1 ) {
 
-            System.out.println( "X ganha diagonal secundaria" );
             App.setRoot("vitoriaX" );
 
         }
@@ -98,7 +120,6 @@ public class Velha {
         //Checa diagonal 1 O
         if( ( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) {
 
-            System.out.println( "O ganha diagonal principal" );
             App.setRoot("vitoriaO" );
 
         } 
@@ -106,16 +127,14 @@ public class Velha {
         //Checa diagonal 2 O
         if( ( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2 ) {
 
-            System.out.println( "O ganha diagonal secundaria" );
             App.setRoot("vitoriaO" );
 
         }
-        
-        App.setRoot("empate" );
+
+        verificarEmpate( jogo );
 
         } catch(IOException ex){
 
-            System.out.println("Erro o trocar de tela");
             System.err.println(ex.getMessage());
 
         }

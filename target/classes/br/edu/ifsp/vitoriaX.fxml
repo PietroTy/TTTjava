@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <Text layoutX="230.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parabéns !" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="BLUE" layoutX="312.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Text>
+            <Text layoutX="151.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ganhou o jogo" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell" size="75.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

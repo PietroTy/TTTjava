@@ -44,7 +44,6 @@ public class Velha {
     
         // Verifica se todas as posições no tabuleiro estão preenchidas (sem valores 0)
         for (int i = 0; i < 3; i++) {
-
             for (int j = 0; j < 3; j++) {
 
                 if (jogo[i][j] == 0) {
@@ -103,33 +102,20 @@ public class Velha {
 
         }
 
-        //Checa diagonal 1 X
-        if( ( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) {
+        //Checa as diagonais X
+        if( (( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) || (( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1)) {
 
             App.setRoot("vitoriaX" );
 
         } 
 
-        //Checa diagonal 2 X
-        if( ( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1 ) {
 
-            App.setRoot("vitoriaX" );
-
-        }
-
-        //Checa diagonal 1 O
-        if( ( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) {
+        //Checa diagonais O
+        if( (( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) || (( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2)) {
 
             App.setRoot("vitoriaO" );
 
         } 
-
-        //Checa diagonal 2 O
-        if( ( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2 ) {
-
-            App.setRoot("vitoriaO" );
-
-        }
 
         verificarEmpate( jogo );
 
@@ -143,60 +129,60 @@ public class Velha {
 
     public void computarJogada00() {
 
-        aparecerBotao(b00, 0, 0);
+        computarJogada(b00, 0, 0);
 
     }
     
     public void computarJogada01() {
 
-        aparecerBotao(b01, 0, 1);
+        computarJogada(b01, 0, 1);
 
     }
 
     public void computarJogada02() {
 
-        aparecerBotao(b02, 0, 2);
+        computarJogada(b02, 0, 2);
 
     }
 
     public void computarJogada10() {
 
-        aparecerBotao(b10, 1, 0);
+        computarJogada(b10, 1, 0);
 
     }
     
     public void computarJogada11() {
 
-        aparecerBotao(b11, 1, 1);
+        computarJogada(b11, 1, 1);
 
     }
 
     public void computarJogada12() {
 
-        aparecerBotao(b12, 1, 2);
+        computarJogada(b12, 1, 2);
         
     }
 
     public void computarJogada20() {
 
-        aparecerBotao(b20, 2, 0);
+        computarJogada(b20, 2, 0);
 
     }
 
     public void computarJogada21() {
 
-        aparecerBotao(b21, 2, 1);
+        computarJogada(b21, 2, 1);
 
     }
 
     public void computarJogada22() {
         
-        aparecerBotao(b22, 2, 2);
+        computarJogada(b22, 2, 2);
 
     }
 
 
-    private void aparecerBotao(Button botao, int linha, int coluna){
+    private void computarJogada(Button botao, int linha, int coluna){
 
         botao.setOpacity(1);
         botao.setBackground(null);

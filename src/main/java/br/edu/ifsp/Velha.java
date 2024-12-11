@@ -66,7 +66,7 @@ public class Velha {
         
     }
 
-    private void checarVitoria(int[][] jogo) {
+    private boolean checarVitoria(int[][] jogo) {
 
         try{
             
@@ -76,6 +76,7 @@ public class Velha {
             if((jogo[i][0] == 1) && (jogo[i][1] == 1) && (jogo[i][2] == 1)){
                 
                 App.setRoot("vitoriaX" );
+                return true;
 
             }
 
@@ -83,6 +84,7 @@ public class Velha {
             if((jogo[0][i] == 1) && (jogo[1][i] == 1) && (jogo[2][i] == 1)){
 
                 App.setRoot("vitoriaX" );
+                return true;
             
             }
 
@@ -90,6 +92,7 @@ public class Velha {
              if((jogo[i][0] == 2) && (jogo[i][1] == 2) && (jogo[i][2] == 2)){
 
                 App.setRoot("vitoriaO" );
+                return true;
             
             }
 
@@ -97,6 +100,7 @@ public class Velha {
             if((jogo[0][i] == 2) && (jogo[1][i] == 2) && (jogo[2][i] == 2)){
                 
                 App.setRoot("vitoriaO" );
+                return true;
     
             }
 
@@ -106,6 +110,7 @@ public class Velha {
         if( (( jogo[0][0] == 1) && ( jogo[1][1] == 1 ) && jogo[2][2] == 1 ) || (( jogo[0][2] == 1) && ( jogo[1][1] == 1 ) && jogo[2][0] == 1)) {
 
             App.setRoot("vitoriaX" );
+            return true;
 
         } 
 
@@ -114,6 +119,7 @@ public class Velha {
         if( (( jogo[0][0] == 2) && ( jogo[1][1] == 2 ) && jogo[2][2] == 2 ) || (( jogo[0][2] == 2) && ( jogo[1][1] == 2 ) && jogo[2][0] == 2)) {
 
             App.setRoot("vitoriaO" );
+            return true;
 
         } 
 
@@ -124,6 +130,8 @@ public class Velha {
             System.err.println(ex.getMessage());
 
         }
+
+        return false;
 
     }
 

@@ -7,7 +7,10 @@ import javafx.scene.text.Text;
 public class VitoriaX {
 
     @FXML
-    private Text caixaDeTexto;
+    public Text caixaDeTexto;
 
+    public void modificarTexto(Text caixa, String texto){
+        caixa.setText(texto);
+    }
 
 }

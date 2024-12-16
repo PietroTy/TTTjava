@@ -5,14 +5,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.VitoriaO">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.VitoriaO">
    <children>
-      <AnchorPane prefHeight="541.0" prefWidth="800.0">
+      <AnchorPane prefHeight="500.0" prefWidth="800.0">
          <children>
-            <Text layoutX="343.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O">
+            <Text layoutX="230.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parabéns !" textAlignment="CENTER">
                <font>
-                  <Font size="150.0" />
+                  <Font name="Rockwell" size="70.0" />
+               </font>
+            </Text>
+            <Text fx:id="caixaDeTexto" fill="BLUE" layoutX="361.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O" textAlignment="CENTER">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Text>
+            <Text layoutX="151.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ganhou o jogo" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell" size="75.0" />
                </font>
             </Text>
          </children>

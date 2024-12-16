@@ -1,16 +1,20 @@
 package br.edu.ifsp;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 
-public class VitoriaX {
-
+public class VitoriaX implements Initializable {
     @FXML
-    public Text caixaDeTexto;
+    private Text caixaDeTexto;
 
-    public void modificarTexto(Text caixa, String texto){
-        caixa.setText(texto);
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        caixaDeTexto.setText(TimeController.nomeXis);
     }
+
 
 }

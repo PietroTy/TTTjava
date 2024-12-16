@@ -1,10 +1,10 @@
 package br.edu.ifsp;
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javafx.event.ActionEvent;
 
 public class TimeController {
 
@@ -34,13 +34,17 @@ public class TimeController {
     @FXML
     private TextField nomeO;
 
-    public String nomeXis;
-    public String nomeBola;
+    public static String nomeXis;
+    public static String nomeBola;
+    @FXML
+    public Text caixaDeTexto;
 
     @FXML
     private void guardarX() {
 
         nomeXis = nomeX.getText();
+
+       // caixaDeTexto.setText(nomeX.getText());
 
     }
 

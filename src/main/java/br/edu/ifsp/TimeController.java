@@ -36,8 +36,6 @@ public class TimeController {
 
     public static String nomeXis;
     public static String nomeBola;
-    @FXML
-    public Text caixaDeTexto;
 
     @FXML
     private void guardarX() {
